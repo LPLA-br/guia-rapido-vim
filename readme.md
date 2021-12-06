@@ -13,7 +13,7 @@ Email:**anonimus**
 
 ##Legenda
 
-_número_ - Neste documento indica que e possível digitar um
+número - Neste documento indica que e possível digitar um
  	 número antes da combinação de teclas a ser feita
 	 alterando a ação desejada em quantidade.
 	 exemplo;	10g vai para linha 10
@@ -73,8 +73,8 @@ _número_ - Neste documento indica que e possível digitar um
 	U		mudar área selecionada para maiúscula(caixa-alta).
 	u		mudar área selecionada para minúscula(caixa-baixa).
 
-  _número_>		adicionar mais 1 ou N tabulações para área selecionada.
-  _número_<		adicionar menos 1 ou N tabulações para área selecionada.
+  número>		adicionar mais 1 ou N tabulações para área selecionada.
+  número<		adicionar menos 1 ou N tabulações para área selecionada.
 
 	c		apaga área selecionada e vai para o modo INSERT (c change).
 	d		apaga área selecionada e vai para o modo NORMAL (d delete).
@@ -86,14 +86,14 @@ _número_ - Neste documento indica que e possível digitar um
 	u		desfazer
 	p		colar conteúdo previamente copiado ou cortado (p paste).
 
-  _número_yy		copiar linha inteira onde o cursor está (y yank).
-  _número_dd		recorta a linha inteira onde o cursor está (d delete).
+  númeroyy		copiar linha inteira onde o cursor está (y yank).
+  númerodd		recorta a linha inteira onde o cursor está (d delete).
 
-  _número_dw		apagar palavra para frente (dw delete word).
-  _número_x		apagar letras a frente do cursor.
+  númerodw		apagar palavra para frente (dw delete word).
+  númerox		apagar letras a frente do cursor.
 
-  _número_d$		apagar do cursor até o fim da linha.
-  _número_d0		apagar do cursor até o comesso da linha.
+  númerod$		apagar do cursor até o fim da linha.
+  númerod0		apagar do cursor até o comesso da linha.
 	
 
 	qq		comessar ou parar de gravar um MACRO.
@@ -101,22 +101,22 @@ _número_ - Neste documento indica que e possível digitar um
 
 	/texto		localizar um padrão de cima para baixo.
 	?texto		localizar um padrão de baixo para cima.
-  _número_n		mostra o proximo padrão encontrado.
+  númeron		mostra o proximo padrão encontrado.
 
-  _número_g		ir para linha especificada por número. g sem número vai para o fim arquivo.
+  númerog		ir para linha especificada por número. g sem número vai para o fim arquivo.
 
-  _número_w		mover cursor para frente pelo comesso das palavras.
-  _número_e		mover cursor para frente pelo fim das palavras.
-  _número_b		mover cursor para traz pelo comesso das palavras.	
+  númerow		mover cursor para frente pelo comesso das palavras.
+  númeroe		mover cursor para frente pelo fim das palavras.
+  númerob		mover cursor para traz pelo comesso das palavras.	
 
-  _número_$		mover cursor para o fim da linha.
-  _número_0		mover cursor para o comesso da linha.
+  número$		mover cursor para o fim da linha.
+  número0		mover cursor para o comesso da linha.
 
-  _número_}		mover cursor para o parágrafo abaixo.		
-  _número_{		mover cursor para o parágrafo acima.
+  número}		mover cursor para o parágrafo abaixo.		
+  número{		mover cursor para o parágrafo acima.
 
-  _número_j		mover cursor para baixo.
-  _número_k		mover cursor para cima.
+  númeroj		mover cursor para baixo.
+  númerok		mover cursor para cima.
 
 	mx		marcar atual posição do cursor.
 	'x		saltar para última posição marcada.
@@ -185,5 +185,7 @@ _número_ - Neste documento indica que e possível digitar um
 	:%s/argum/algum/g	substituir padrão por outro sem perguntar.
 	:%s/consola/console/gc	substituir padrão por outro perguntando em cada ocorrência.
 
-##v1.0
+##Documentação Oficial Completa Em Inglês
+
+[vimhelp.org](https://vimhelp.org/)
 
