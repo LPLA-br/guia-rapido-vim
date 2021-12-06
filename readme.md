@@ -12,7 +12,7 @@ Escrito por: Luiz Paulo de Lima Araújo
 Email:**anonimus**
 
 ##Legenda
-
+```
 número - Neste documento indica que e possível digitar um
  	 número antes da combinação de teclas a ser feita
 	 alterando a ação desejada em quantidade.
@@ -41,11 +41,11 @@ número - Neste documento indica que e possível digitar um
 		vim a.txt b.txt c.txt
 	Se deparando com apenas um texto na tela principal do editor.
 	use os comandos :bn :bp :bd :ls para lidar com estes buffers.
-
+```
 ##Uso básico
 
 #Modo Inserção i
-
+```
 	del		apaga letra abaixo do cursor.
 	ctrl shift v	colar texto do clipboard do sitema para o vim. Ou shift insert.
 
@@ -67,9 +67,9 @@ número - Neste documento indica que e possível digitar um
 	ctrl w		apagar palavra antes do cursor.
 
 	ctrl n 		autocompleta com palavras pre-existentes.
-
+```
 #Modo Visual v
-
+```
 	U		mudar área selecionada para maiúscula(caixa-alta).
 	u		mudar área selecionada para minúscula(caixa-baixa).
 
@@ -79,9 +79,9 @@ número - Neste documento indica que e possível digitar um
 	c		apaga área selecionada e vai para o modo INSERT (c change).
 	d		apaga área selecionada e vai para o modo NORMAL (d delete).
 	y		copia área selecionada e vai para o modo NORMAL (y yank).
-
+```
 #Modo Normal esc
-
+```
 	ctrl r		refazer
 	u		desfazer
 	p		colar conteúdo previamente copiado ou cortado (p paste).
@@ -144,9 +144,9 @@ número - Neste documento indica que e possível digitar um
 	"AB		gravar registrador de textos onde A é o nome do
 			registrador e B é a operação a ser feita (p-paste
 			y-yank d-delete c-change)
-
+```
 #Linha De Comando :
-
+```
 	:help	COMANDO		obter ajuda acerca de um comando.
 
 	:e /file		abrir um arquivo do diretório especificado.
@@ -184,7 +184,7 @@ número - Neste documento indica que e possível digitar um
 
 	:%s/argum/algum/g	substituir padrão por outro sem perguntar.
 	:%s/consola/console/gc	substituir padrão por outro perguntando em cada ocorrência.
-
+```
 ##Documentação Oficial Completa Em Inglês
 
 [vimhelp.org](https://vimhelp.org/)
