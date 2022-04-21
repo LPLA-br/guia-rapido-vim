@@ -70,9 +70,6 @@ número - Neste documento indica que e possível digitar um
 ```
 #Modo Visual v
 ```
-	o		cria linha vazia abaixo, vai para, entra em insert.
-	O		cria linha vazia acima, vai para, entra em insert.
-
 	U		mudar área selecionada para maiúscula(caixa-alta).
 	u		mudar área selecionada para minúscula(caixa-baixa).
 
