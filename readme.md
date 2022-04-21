@@ -70,6 +70,9 @@ número - Neste documento indica que e possível digitar um
 ```
 #Modo Visual v
 ```
+	o		cria linha vazia abaixo, vai para, entra em insert.
+	O		cria linha vazia acima, vai para, entra em insert.
+
 	U		mudar área selecionada para maiúscula(caixa-alta).
 	u		mudar área selecionada para minúscula(caixa-baixa).
 
@@ -82,6 +85,9 @@ número - Neste documento indica que e possível digitar um
 ```
 #Modo Normal esc
 ```
+	o 		cria linha vazia abaixo, vai para, e entra em insert
+	O 		cria linha vazia acima , vai para, e entra em insert
+
 	ctrl r		refazer
 	u		desfazer
 	p		colar conteúdo previamente copiado ou cortado (p paste).
