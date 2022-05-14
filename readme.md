@@ -2,9 +2,9 @@
 
 pt-BR
 Um manual de consulta rápida e prática para iniciantes
-do vim. Imprima-o ou Matenha-o em uma janela resevada
-para consultas breves.
-Obrigado por ler-lo, tenha um dia bom e produtivo.
+do editor de texto VIM. Matenha-o em uma janela para
+eventuais consultas.
+Obrigado por ler-lo, tenha um dia bom e muito produtivo.
 
 #Autor
 
@@ -13,32 +13,38 @@ Email:**anonimus**
 
 ##Legenda
 ```
-número - Neste documento indica que e possível digitar um
- 	 número antes da combinação de teclas a ser feita
-	 alterando a ação desejada em quantidade.
-	 exemplo;	10g vai para linha 10
-	 		g vai para a linha final do texto
+	No modo normal e visual digitar um número antes da
+	combinação de teclas modificará em número a ação.
+	Exemplos:
+		10gg vai para linha 10.
+		gg vai para a primeira linha.
+		5dd vai deletar 5 linha para baixo.
+		8> vai colocar 8 tabulações na área selecionada.
 
-**Registradores** - registros que armazenam informação textual.
- somente leitura
-	: último comando
-	. último texto que você inseriu
-	% nome do arquivo corrente
-	# nome do arquivo editado anteriormente
- leitura e escrita
-	" registrador padrão para onde vai deleção, cópia implícita
-	0 auxiliar do registrador acima
-	1 até 9	fila de deleção, conteúdo mais recente fica em 1 e mais antigo fica em 9
-	- auxiliar dos registradores numéricos, evitando o rápido enchimento. deleção
-	  vem para aqui
-	a até z e A até Z registradores de uso geral para você usar
-	+ clipboard do sistema
-	- registrador buraco negro
-	/ registrador de última busca
+	Registradores - armazenam informação textual.
+		somente leitura
+			: último comando.
+			. último texto que você inseriu.
+			% nome do arquivo corrente.
+			# nome do arquivo editado anteriormente.
+		 leitura e escrita
+			" registrador padrão para onde vai deleção, cópia
+			  implícita.
+			0 auxiliar do registrador acima, atuando como
+			  um secundário.
+			1 até 9	fila de deleção, conteúdo mais recente
+			  fica em 1 e mais antigo fica em 9.
+			- auxiliar dos registradores numéricos, evitando
+			  o enchimento rápido da fila. deleção vem para aqui.
+			[a-z][A-Z] registradores de uso geral para você usar
+			para armazenar texto.
+			+ clipboard do sistema
+			- registrador buraco negro, caiu aqui já era.
+			/ registrador de última busca
 
-**buffers** - vários textos abertos sem ser em tela dividida
+	Buffers - vários textos abertos sem ser em telas divididas
 	Digamos que você ,no terminal, abriu vários textos com o vim assim:
-		vim a.txt b.txt c.txt
+	$vim a.txt b.txt c.txt
 	Se deparando com apenas um texto na tela principal do editor.
 	use os comandos :bn :bp :bd :ls para lidar com estes buffers.
 ```
@@ -46,10 +52,14 @@ número - Neste documento indica que e possível digitar um
 
 #Modo Inserção i
 ```
-	del		apaga letra abaixo do cursor.
-	ctrl shift v	colar texto do clipboard do sitema para o vim. Ou shift insert.
+	home		move o cursor para o início da linha.
+	end		move o cursor para o fim da linha.
+	insert		vai para o modo substituição.
+	del		apaga letra sob o cursor.
+	page_up		rolar o texto para cima.
+	page_down	rolar o texto para baixo.
 
-	ctrl p 		autocompleta com palavras pre-existentes no texto de forma interativa.
+	ctrl shift v	colar texto do clipboard do sitema para o vim. Ou shift insert.
 
 	ctrl t		isere tabulação no início da linha.
 	ctrl d		apaga tabulação no início da linha.
@@ -59,22 +69,23 @@ número - Neste documento indica que e possível digitar um
 	ctrl y		recria a letra acima  do cursor para a linha atual.
 
 	ctrl c		voltar para o modo normal.
-	ctrl a		iserir trecho previamente salvo.		
+	ctrl a		iserir trecho previamente salvo.
 
 	ctrl r R	colar conteúdo do registrador, onde R é o nome do registrador.
 
 	ctrl u 		apagar todo o conteúdo de onde o cursor está até o início da linha.
 	ctrl w		apagar palavra antes do cursor.
 
-	ctrl n 		autocompleta com palavras pre-existentes.
+	ctrl n 		autocompletar com palavras pre-existentes.
+	ctrl p 		autocompletar com palavras pre-existentes.
 ```
 #Modo Visual v
 ```
 	U		mudar área selecionada para maiúscula(caixa-alta).
 	u		mudar área selecionada para minúscula(caixa-baixa).
 
-  número>		adicionar mais 1 ou N tabulações para área selecionada.
-  número<		adicionar menos 1 ou N tabulações para área selecionada.
+	>		adicionar mais 1 ou N tabulações para área selecionada.
+	<		adicionar menos 1 ou N tabulações para área selecionada.
 
 	c		apaga área selecionada e vai para o modo INSERT (c change).
 	d		apaga área selecionada e vai para o modo NORMAL (d delete).
@@ -82,52 +93,58 @@ número - Neste documento indica que e possível digitar um
 ```
 #Modo Normal esc
 ```
-	o 		cria linha vazia abaixo, vai para, e entra em insert
-	O 		cria linha vazia acima , vai para, e entra em insert
+	"AB		gravar registrador de textos onde A é o nome do
+			registrador e B é a operação a ser feita
+			(p-paste y-yank d-delete c-change).
+
+	o 		cria linha vazia abaixo, vai para ela, e entra em insert.
+	O 		cria linha vazia acima , vai para ela, e entra em insert.
 
 	ctrl r		refazer
 	u		desfazer
 	p		colar conteúdo previamente copiado ou cortado (p paste).
 
-  númeroyy		copiar linha inteira onde o cursor está (y yank).
-  númerodd		recorta a linha inteira onde o cursor está (d delete).
+	yy		copiar linha inteira onde o cursor está (y yank).
+	dd		deleta-copia a linha inteira onde o cursor está (d delete).
 
-  númerodw		apagar palavra para frente (dw delete word).
-  númerox		apagar letras a frente do cursor.
+	dw		apagar palavra para frente (dw delete word).
+	x		apagar letras a frente do cursor.
 
-  númerod$		apagar do cursor até o fim da linha.
-  númerod0		apagar do cursor até o comesso da linha.
+	d$		apagar do cursor até o fim da linha.
+	d0		apagar do cursor até o comesso da linha.
 	
-
 	qq		comessar ou parar de gravar um MACRO.
 	@q		colar MACRO gravada.
 
-	/texto		localizar um padrão de cima para baixo.
-	?texto		localizar um padrão de baixo para cima.
-  númeron		mostra o proximo padrão encontrado.
+	/padrão		localizar um padrão de cima para baixo.
+	?padrão		localizar um padrão de baixo para cima.
+	n		mostrar o proximo padrão encontrado.
 
-  númerog		ir para linha especificada por número. g sem número vai para o fim arquivo.
+	g		ir para linha especificada por número. Apenas g vai para comesso do arquivo.
+	G		ir para linha especificada por número. Apenas G vai para fim do arquivo.
 
-  númerow		mover cursor para frente pelo comesso das palavras.
-  númeroe		mover cursor para frente pelo fim das palavras.
-  númerob		mover cursor para traz pelo comesso das palavras.	
+	w		mover cursor para frente pelo comesso das palavras.
+	e		mover cursor para frente pelo fim das palavras.
+	b		mover cursor para traz pelo comesso das palavras.
 
-  número$		mover cursor para o fim da linha.
-  número0		mover cursor para o comesso da linha.
+	$		mover cursor para o fim da linha.
+	0		mover cursor para o comesso da linha.
 
-  número}		mover cursor para o parágrafo abaixo.		
-  número{		mover cursor para o parágrafo acima.
+	}		mover cursor para o parágrafo abaixo.
+	{		mover cursor para o parágrafo acima.
 
-  númeroj		mover cursor para baixo.
-  númerok		mover cursor para cima.
+	j		mover cursor para baixo.
+	k		mover cursor para cima.
+	h		mover cursor para esquerda.
+	l		mover cursor para direita.
 
 	mx		marcar atual posição do cursor.
 	'x		saltar para última posição marcada.
-	''		voltar para linha que o cursor estava antes do salto.
-	'.		saltar para última linha modificada por você.
-	
-	ctrl y		rolar texo uma linha para cima.
-	ctrl e		rolar texo uma linha para baixo.
+	''		voltar para linha que o cursor estava antes do salto, vai e volta.
+	'.		saltar para última linha que você modificou.
+
+	ctrl y		rolar texto uma linha para cima.
+	ctrl e		rolar texto uma linha para baixo.
 
 	H		mover cursor para o topo da tela.
 	M		mover cursor para o meio da tela.
@@ -144,29 +161,28 @@ número - Neste documento indica que e possível digitar um
 	ctrl wr		rotacionar janelas.
 	ctrl wq		fechar janela em que o cursor se encotra.
 
-	"AB		gravar registrador de textos onde A é o nome do
-			registrador e B é a operação a ser feita (p-paste
-			y-yank d-delete c-change)
 ```
 #Linha De Comando :
 ```
-	:help	COMANDO		obter ajuda acerca de um comando.
+	:help	COMANDO		obter ajuda acerca de um comando do vim.
 
 	:e /file		abrir um arquivo do diretório especificado.
 	:w			salvar no dirétorio onde você abriu o vim.
 	:saveas /file		salvar no dirétorio especificado por você.
 	:q			sair
-	:q!			forçar saída sem salvar.
+	:q!			forçar saída sem salvar o arquivo que você modificou.
 
-	:bn			mudar para o proximo buffer.		|buffers
-	:bp			mudar para o buffer anterior.		|veja legenda
-	:bd			fechar o buffer.			|para mais
-	:ls			listar todos os buffers abertos.	|detalhes.
+	:bn			mudar para o proximo buffer.
+	:bp			mudar para o buffer anterior.
+	:bd			fechar o buffer.
+	:ls			listar todos os buffers abertos.
 
 	:split	/file		abrir outro arquivo para tela dividida na horizontal.
 	:vsplit	/file		abrir outro arquivo para tela dividida na vertical.
 
-	:colorschereme NOME	alterar o esquema de cores dos códigos no vim.
+	:colorschereme NOME	alterar o esquema de cores da coloração de sintaxe do vim.
+	:set background=	pode ser dark ou light.
+	:set mouse=a		para que o mouse possa interagir com o vim.
 
 	:set number		ativar numeração de linhas.
 	:set nonumber		desativar numeração de linhas.
