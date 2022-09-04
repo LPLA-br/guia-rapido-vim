@@ -1,17 +1,26 @@
-##Sobre
+# VIM
 
-pt-BR
-Um manual de consulta rápida e prática para iniciantes
-do editor de texto VIM. Matenha-o em uma janela para
-eventuais consultas.
-Obrigado por ler-lo, tenha um dia bom e muito produtivo.
+<figure>
+	<img src="https://commons.wikimedia.org/wiki/File:Icon-Vim.svg" alt="Imagem quebrada">
+</figure>
+<p>
+	O editor de texto altamente configurável para programadores.
+</p>
 
-#Autor
+## Sobre
+
+<p>
+	pt-BR Um manual de consulta rápida e prática para iniciantes
+	do editor de texto VIM ou NEOVIM. Matenha-o em uma janela para
+	eventuais consultas. Obrigado por ler-lo, tenha um dia bom e muito produtivo.
+</p>
+
+## Autor
 
 Escrito por: Luiz Paulo de Lima Araújo
-Email:**anonimus**
 
-##Legenda
+## Legenda
+
 ```
 	No modo normal e visual digitar um número antes da
 	combinação de teclas modificará em número a ação.
@@ -19,7 +28,8 @@ Email:**anonimus**
 		10gg vai para linha 10.
 		gg vai para a primeira linha.
 		5dd vai deletar 5 linha para baixo.
-		8> vai colocar 8 tabulações na área selecionada.
+		8> vai colocar 8 tabulações na área selecionada no modo Visual.
+		5>> vai indentar uma vez às cinco linhas abaixo.
 
 	Registradores - armazenam informação textual.
 		somente leitura
@@ -41,16 +51,21 @@ Email:**anonimus**
 			+ clipboard do sistema
 			- registrador buraco negro, caiu aqui já era.
 			/ registrador de última busca
+	Use o commando :registers para visualizar os seus respectivos conteúdos.
 
-	Buffers - vários textos abertos sem ser em telas divididas
-	Digamos que você ,no terminal, abriu vários textos com o vim assim:
+	Buffers - Vários arquivos de textos abertos em simultâneo.
+	Digamos que você abriu vários textos com o vim assim:
 	$vim a.txt b.txt c.txt
-	Se deparando com apenas um texto na tela principal do editor.
-	use os comandos :bn :bp :bd :ls para lidar com estes buffers.
+	Verás apenas um buffer com apenas um texto na tela principal do editor.
+	use os comandos :bn :bp para mover por entre esses buffers abertos.
+	:bdelete ou :bd para deletar o buffer (não o arquivo).
+	:split ou :vsplit para dividir a tela respecivamente na: horizontal ou vertical.
 ```
-##Uso básico
 
-#Modo Inserção i
+## Uso básico
+
+### Modo Inserção i
+
 ```
 	home		move o cursor para o início da linha.
 	end		move o cursor para o fim da linha.
@@ -79,7 +94,9 @@ Email:**anonimus**
 	ctrl n 		autocompletar com palavras pre-existentes.
 	ctrl p 		autocompletar com palavras pre-existentes.
 ```
-#Modo Visual v
+
+### Modo Visual v
+
 ```
 	U		mudar área selecionada para maiúscula(caixa-alta).
 	u		mudar área selecionada para minúscula(caixa-baixa).
@@ -91,7 +108,9 @@ Email:**anonimus**
 	d		apaga área selecionada e vai para o modo NORMAL (d delete).
 	y		copia área selecionada e vai para o modo NORMAL (y yank).
 ```
-#Modo Normal esc
+
+### Modo Normal esc
+
 ```
 	"AB		gravar registrador de textos onde A é o nome do
 			registrador e B é a operação a ser feita
@@ -162,7 +181,9 @@ Email:**anonimus**
 	ctrl wq		fechar janela em que o cursor se encotra.
 
 ```
-#Linha De Comando :
+
+### Linha De Comando :
+
 ```
 	:help	COMANDO		obter ajuda acerca de um comando do vim.
 
@@ -170,11 +191,11 @@ Email:**anonimus**
 	:w			salvar no dirétorio onde você abriu o vim.
 	:saveas /file		salvar no dirétorio especificado por você.
 	:q			sair
-	:q!			forçar saída sem salvar o arquivo que você modificou.
+	:q!			forçar saída sem salvar o arquivo ou os arquivos que você modificou.
 
 	:bn			mudar para o proximo buffer.
 	:bp			mudar para o buffer anterior.
-	:bd			fechar o buffer.
+	:bd			fechar/deletar o buffer corrente.
 	:ls			listar todos os buffers abertos.
 
 	:split	/file		abrir outro arquivo para tela dividida na horizontal.
@@ -204,7 +225,12 @@ Email:**anonimus**
 	:%s/argum/algum/g	substituir padrão por outro sem perguntar.
 	:%s/consola/console/gc	substituir padrão por outro perguntando em cada ocorrência.
 ```
-##Documentação Oficial Completa Em Inglês
+
+## Documentação Oficial Completa Em Inglês para o VIM
 
 [vimhelp.org](https://vimhelp.org/)
+
+## Para o NEOVIM
+
+[neovim.io/doc](https://neovim.io/doc/)
 
