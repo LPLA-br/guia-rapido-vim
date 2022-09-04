@@ -1,7 +1,7 @@
 # VIM
 
 <figure>
-	<img src="https://commons.wikimedia.org/wiki/File:Icon-Vim.svg" alt="Imagem quebrada">
+	<img src="https://comparasoftware-192fc.kxcdn.com/wp-content/uploads/2018/08/logovim.png" alt="Imagem quebrada">
 </figure>
 <p>
 	O editor de texto altamente configurável para programadores.
