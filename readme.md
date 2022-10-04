@@ -95,7 +95,7 @@ Escrito por: Luiz Paulo de Lima Araújo
 	ctrl p 		autocompletar com palavras pre-existentes.
 ```
 
-### Modo Visual v
+### Modo Visual v    OU    Modo Visual V (visual block)
 
 ```
 	U		mudar área selecionada para maiúscula(caixa-alta).
@@ -112,6 +112,14 @@ Escrito por: Luiz Paulo de Lima Araújo
 ### Modo Normal esc
 
 ```
+	i		Modo insert.
+	I		Modo insert no comesso da linha.
+	v		Modo visual.
+	V		Modo visual em bloco retangular.
+	R		Modo replace.
+
+	r		replace da letra em que o cursor esta em cima.
+
 	"AB		gravar registrador de textos onde A é o nome do
 			registrador e B é a operação a ser feita
 			(p-paste y-yank d-delete c-change).
@@ -137,7 +145,7 @@ Escrito por: Luiz Paulo de Lima Araújo
 
 	/padrão		localizar um padrão de cima para baixo.
 	?padrão		localizar um padrão de baixo para cima.
-	n		mostrar o proximo padrão encontrado.
+	n		mostrar o próximo padrão encontrado.
 
 	g		ir para linha especificada por número. Apenas g vai para comesso do arquivo.
 	G		ir para linha especificada por número. Apenas G vai para fim do arquivo.
@@ -152,10 +160,15 @@ Escrito por: Luiz Paulo de Lima Araújo
 	}		mover cursor para o parágrafo abaixo.
 	{		mover cursor para o parágrafo acima.
 
+	(		mover cursor para o parágrafo acima com linha inicial.
+	)		mover cursor para o parágrafo abaixo com linha inicial.
+
 	j		mover cursor para baixo.
 	k		mover cursor para cima.
 	h		mover cursor para esquerda.
 	l		mover cursor para direita.
+
+	J		fundir a linha de baixo com a atual.
 
 	mx		marcar atual posição do cursor.
 	'x		saltar para última posição marcada.
@@ -225,6 +238,19 @@ Escrito por: Luiz Paulo de Lima Araújo
 	:%s/argum/algum/g	substituir padrão por outro sem perguntar.
 	:%s/consola/console/gc	substituir padrão por outro perguntando em cada ocorrência.
 ```
+
+## Replace R
+
+<p>
+Esse modo pode ser utilizado para editar após um $(fimDeLinha) no modo normal,
+visto que a entrada do modo insert não ocorre para além do último caractere da linha
+em que o cursor do normal estava.
+</p>
+
+```
+	atalhos do modo insert funcionam aqui.
+```
+
 
 ## Documentação Oficial Completa Em Inglês para o VIM
 
