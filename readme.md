@@ -112,6 +112,7 @@ Escrito por: Luiz Paulo de Lima Araújo
 ### Modo Normal esc
 
 ```
+	a		Modo insert no fim da linha.
 	i		Modo insert.
 	I		Modo insert no comesso da linha.
 	v		Modo visual.
