@@ -242,12 +242,6 @@ Escrito por: Luiz Paulo de Lima Araújo
 
 ## Replace R
 
-<p>
-Esse modo pode ser utilizado para editar após um $(fimDeLinha) no modo normal,
-visto que a entrada do modo insert não ocorre para além do último caractere da linha
-em que o cursor do normal estava.
-</p>
-
 ```
 	atalhos do modo insert funcionam aqui.
 ```
