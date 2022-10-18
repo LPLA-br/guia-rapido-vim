@@ -115,9 +115,10 @@ Escrito por: Luiz Paulo de Lima Araújo
 	a		Modo insert no fim da linha.
 	i		Modo insert.
 	I		Modo insert no comesso da linha.
-	v		Modo visual.
-	V		Modo visual em bloco retangular.
 	R		Modo replace.
+	v		Modo visual.
+	V		Modo visual linha inteira.
+	ctrl+V		Modo visual em bloco quadrado.
 
 	r		replace da letra em que o cursor esta em cima.
 
