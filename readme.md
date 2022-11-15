@@ -49,7 +49,7 @@ Escrito por: Luiz Paulo de Lima Araújo
 			[a-z][A-Z] registradores de uso geral para você usar
 			para armazenar texto.
 			+ clipboard do sistema
-			- registrador buraco negro, caiu aqui já era.
+			_ registrador buraco negro, caiu aqui já era.
 			/ registrador de última busca
 	Use o commando :registers para visualizar os seus respectivos conteúdos.
 
@@ -62,15 +62,15 @@ Escrito por: Luiz Paulo de Lima Araújo
 	:split ou :vsplit para dividir a tela respecivamente na: horizontal ou vertical.
 ```
 
-## Uso básico
+## Uso Básico
 
 ### Modo Inserção i
 
 ```
-	home		move o cursor para o início da linha.
-	end		move o cursor para o fim da linha.
+    home	    move o cursor para o início da linha.
+	end		    move o cursor para o fim da linha.
 	insert		vai para o modo substituição.
-	del		apaga letra sob o cursor.
+	del		    apaga letra sob o cursor.
 	page_up		rolar o texto para cima.
 	page_down	rolar o texto para baixo.
 
@@ -78,7 +78,7 @@ Escrito por: Luiz Paulo de Lima Araújo
 
 	ctrl t		isere tabulação no início da linha.
 	ctrl d		apaga tabulação no início da linha.
-      0 ctrl d		apaga todas as tabulações da linha.
+    0 ctrl d	apaga todas as tabulações da linha.
 
 	ctrl e		recria a letra abaixo do cursor para a linha atual.
 	ctrl y		recria a letra acima  do cursor para a linha atual.
@@ -117,14 +117,15 @@ Escrito por: Luiz Paulo de Lima Araújo
 	I		Modo insert no comesso da linha.
 	R		Modo replace.
 	v		Modo visual.
-	V		Modo visual linha inteira.
-	ctrl+V		Modo visual em bloco quadrado.
+	V		Modo visual para a linha inteira.
+	ctrl+v	Modo visual em bloco quadrado.
 
-	r		replace da letra em que o cursor esta em cima.
+	r		replace da letra em que o cursor está em cima.
 
 	"AB		gravar registrador de textos onde A é o nome do
 			registrador e B é a operação a ser feita
 			(p-paste y-yank d-delete c-change).
+            Pode ser registrador: [a-z][A-Z][1-9]
 
 	o 		cria linha vazia abaixo, vai para ela, e entra em insert.
 	O 		cria linha vazia acima , vai para ela, e entra em insert.
@@ -158,6 +159,7 @@ Escrito por: Luiz Paulo de Lima Araújo
 
 	$		mover cursor para o fim da linha.
 	0		mover cursor para o comesso da linha.
+    ^       mover cursor para o comesso da linha.
 
 	}		mover cursor para o parágrafo abaixo.
 	{		mover cursor para o parágrafo acima.
@@ -166,14 +168,14 @@ Escrito por: Luiz Paulo de Lima Araújo
 	)		mover cursor para o parágrafo abaixo com linha inicial.
 
 	j		mover cursor para baixo.
-	k		mover cursor para cima.
-	h		mover cursor para esquerda.
+	k		mover cursor para cima.         kima
+	h		mover cursor para esquerda.     jaixo
 	l		mover cursor para direita.
 
 	J		fundir a linha de baixo com a atual.
 
-	mx		marcar atual posição do cursor.
-	'x		saltar para última posição marcada.
+	mX		marcar atual posição do cursor, onde X é um registrador de posição [a-z][A-Z][1-9].
+	'X		saltar para última posição marcada, onde X é o registrador que contém a posição.
 	''		voltar para linha que o cursor estava antes do salto, vai e volta.
 	'.		saltar para última linha que você modificou.
 
@@ -193,7 +195,7 @@ Escrito por: Luiz Paulo de Lima Araújo
 	ctrl w>		aumentar largura da janela onde se encontra o cursor.
 	ctrl w=		fazer todas as janelas terem a mesma largura e altura.
 	ctrl wr		rotacionar janelas.
-	ctrl wq		fechar janela em que o cursor se encotra.
+	ctrl wq		fechar janela em que o cursor se encontra.
 
 ```
 
@@ -248,11 +250,11 @@ Escrito por: Luiz Paulo de Lima Araújo
 ```
 
 
-## Documentação Oficial Completa Em Inglês para o VIM
+## Documentação Oficial Completa Em Inglês para o VIM padrão.
 
 [vimhelp.org](https://vimhelp.org/)
 
-## Para o NEOVIM
+## Para o NEOVIM, o vim melhorado.
 
 [neovim.io/doc](https://neovim.io/doc/)
 
