@@ -256,14 +256,15 @@ Escrito por: Luiz Paulo de Lima Araújo
 ### Linha De Comando :
 
 ```
+
 	:help	COMANDO		obter ajuda acerca de um comando do vim.
 
     {ARQUIVO}
-	:e /file		    abrir um arquivo do caminho especificado.
-	:w			        salvar (recebe argumento de nome se o arquivo novo não tem nome).
-	:saveas /file		salvar no dirétorio especificado por você.
-	:q                  sair (não sai se as modificações do arquivo não foram salvas).
-	:q!                 forçar saída sem salvar o arquivo ou os arquivos que você modificou.
+	:e /file		 abrir um arquivo do caminho especificado.
+	:w			salvar (recebe argumento de nome se o arquivo novo não tem nome).
+	:saveas /file		 salvar no dirétorio especificado por você.
+	:q                  	sair (não sai se as modificações do arquivo não foram salvas).
+	:q!                 	forçar saída sem salvar o arquivo ou os arquivos que você modificou.
 
     {BUFFERS}
 	:bn                 mudar para o proximo buffer.
@@ -276,15 +277,15 @@ Escrito por: Luiz Paulo de Lima Araújo
 	:vsplit	/file		abrir outro arquivo para tela dividida na vertical.
 
     {BUSCA E SUBSTITUIÇÃO}
-    Linha em que o cursor se econtra.
-	 :s/argum/algum/g	    substituir padrão por outro sem perguntar.
-	 :s/consola/console/gc	substituir padrão por outro perguntando em cada ocorrência.
+    Linha em que o cursor se encontra.
+	 :s/argum/algum/g	    	substituir padrão por outro sem perguntar.
+	 :s/consola/console/gc		substituir padrão por outro perguntando em cada ocorrência.
     Todas linhas:
-	 :%s/argum/algum/g	    substituir padrão por outro sem perguntar.
-	 :%s/consola/console/gc	substituir padrão por outro perguntando em cada ocorrência.
-    De uma linha até outra
-     :3,10s/a/b/g           substituir sem perguntar da linha 3 até a 10
-     :3,10s/a/b/gc          substituir perguntando da linha 3 até a 10
+	 :%s/argum/algum/g	    	substituir padrão por outro sem perguntar.
+	 :%s/consola/console/gc		substituir padrão por outro perguntando em cada ocorrência.
+    De uma linha até outra:
+     	:3,10s/a/b/g           		substituir sem perguntar da linha 3 até a 10
+     	:3,10s/a/b/gc          		substituir perguntando da linha 3 até a 10
 
 
     {OUTROS}
@@ -292,19 +293,19 @@ Escrito por: Luiz Paulo de Lima Araújo
 	:set background=	    pode ser dark ou light.
 	:set mouse=a		    para que o mouse possa interagir com o vim.
 
-    :set number             ativar numeração de linhas.
-	:set nonumber		    desativar numeração de linhas.
+    	:set number             	ativar numeração de linhas.
+	:set nonumber		   	desativar numeração de linhas.
 
-	:set relativenumber     ativar numeração de linhas relativas ao cursor.
-	:set norelativenumber	desativar numeração de linhas relativas ao cursor.
+	:set relativenumber     	ativar numeração de linhas relativas ao cursor.
+	:set norelativenumber		desativar numeração de linhas relativas ao cursor.
 
-	:set autoindent		    ativar autoidentação.
-	:set noautoindent	    desativar autoidentação.
+	:set autoindent		    	ativar autoidentação.
+	:set noautoindent	   	desativar autoidentação.
 
 	:registers		        mostrar o conteúdo dos registradores.
 
-	:set paste		    ativar clipboard do sistema.
-	:set nopaste		desativar clipboard do sistema.
+	:set paste		    	ativar clipboard do sistema.
+	:set nopaste			desativar clipboard do sistema.
 
 	:set nowrap		    desativar quebra de linha.
 	:set wrap		    ativar quebra de linha.
