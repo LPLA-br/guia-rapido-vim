@@ -67,6 +67,7 @@ Escrito por: Luiz Paulo de Lima Araújo
 ### Modo Inserção i
 
 ```
+    esc         sair do modo insert.
     home	    move o cursor para o início da linha.
 	end		    move o cursor para o fim da linha.
 	insert		vai para o modo substituição.
@@ -74,22 +75,23 @@ Escrito por: Luiz Paulo de Lima Araújo
 	page_up		rolar o texto para cima.
 	page_down	rolar o texto para baixo.
 
-	ctrl shift v	colar texto do clipboard do sitema para o vim. Ou shift insert.
+	ctrl shift v	colar texto do clipboard do sistema para o vim.
+    shift insert.   colar texto do clipboard do sistema.
 
-	ctrl t		isere tabulação no início da linha.
+	ctrl t		insere tabulação no início da linha.
 	ctrl d		apaga tabulação no início da linha.
     0 ctrl d	apaga todas as tabulações da linha.
 
-	ctrl e		recria a letra abaixo do cursor para a linha atual.
-	ctrl y		recria a letra acima  do cursor para a linha atual.
+	ctrl e		recria o caractere abaixo do cursor para a linha atual.
+	ctrl y		recria o caractere acima  do cursor para a linha atual.
 
 	ctrl c		voltar para o modo normal.
 	ctrl a		iserir trecho previamente salvo.
 
 	ctrl r R	colar conteúdo do registrador, onde R é o nome do registrador.
 
-	ctrl u 		apagar todo o conteúdo de onde o cursor está até o início da linha.
-	ctrl w		apagar palavra antes do cursor.
+	ctrl u 		deletar todo o conteúdo de onde o cursor está até o início da linha.
+	ctrl w		deletar palavra antes do cursor.
 
 	ctrl n 		autocompletar com palavras pre-existentes.
 	ctrl p 		autocompletar com palavras pre-existentes.
@@ -107,48 +109,46 @@ Escrito por: Luiz Paulo de Lima Araújo
 	c		apaga área selecionada e vai para o modo INSERT (c change).
 	d		apaga área selecionada e vai para o modo NORMAL (d delete).
 	y		copia área selecionada e vai para o modo NORMAL (y yank).
+
+    {NOTAS}
+    O poder do visual block
+    Modo visual bloco isola uma área
+    onde comandos atuam somente nesta.
+    copias,colas,deleções,substituições
+    com regex, indentações, armazenamento
+    em registadores e etcetera.
+
 ```
 
 ### Modo Normal esc
 
 ```
+    {MODOS DE EDIÇÃO}
 	a		Modo insert no fim da linha.
 	i		Modo insert.
 	I		Modo insert no comesso da linha.
 	R		Modo replace.
 	v		Modo visual.
 	V		Modo visual para a linha inteira.
-	ctrl+v	Modo visual em bloco quadrado.
+	ctrl+v	Modo visual em bloco quadrado (extremamente útil).
 
-	r		replace da letra em que o cursor está em cima.
 
-	"AB		gravar registrador de textos onde A é o nome do
-			registrador e B é a operação a ser feita
-			(p-paste y-yank d-delete c-change).
-            Pode ser registrador: [a-z][A-Z][1-9]
+    
+    {REMOÇÃO DE CONTEÚDO ENTRE FECHANTES}
+    diX     remover conteúdo entre {} () "" '' `` ´´
+            X=caractere que fecha outro.
 
-	o 		cria linha vazia abaixo, vai para ela, e entra em insert.
-	O 		cria linha vazia acima , vai para ela, e entra em insert.
 
-	ctrl r		refazer
+
+    {REFAZER E DESFAZER}
+	ctrl r	refazer
 	u		desfazer
-	p		colar conteúdo previamente copiado ou cortado (p paste).
 
-	yy		copiar linha inteira onde o cursor está (y yank).
-	dd		deleta-copia a linha inteira onde o cursor está (d delete).
-
-	dw		apagar palavra para frente (dw delete word).
-	x		apagar letras a frente do cursor.
-
-	d$		apagar do cursor até o fim da linha.
-	d0		apagar do cursor até o comesso da linha.
-	
-	qq		comessar ou parar de gravar um MACRO.
-	@q		colar MACRO gravada.
-
-	/padrão		localizar um padrão de cima para baixo.
-	?padrão		localizar um padrão de baixo para cima.
-	n		mostrar o próximo padrão encontrado.
+    {MOVIMENTAÇÃO BÁSICA}
+	j		mover cursor para baixo.
+	k		mover cursor para cima.         kima
+	h		mover cursor para esquerda.     jaixo
+	l		mover cursor para direita.
 
 	g		ir para linha especificada por número. Apenas g vai para comesso do arquivo.
 	G		ir para linha especificada por número. Apenas G vai para fim do arquivo.
@@ -167,17 +167,7 @@ Escrito por: Luiz Paulo de Lima Araújo
 	(		mover cursor para o parágrafo acima com linha inicial.
 	)		mover cursor para o parágrafo abaixo com linha inicial.
 
-	j		mover cursor para baixo.
-	k		mover cursor para cima.         kima
-	h		mover cursor para esquerda.     jaixo
-	l		mover cursor para direita.
 
-	J		fundir a linha de baixo com a atual.
-
-	mX		marcar atual posição do cursor, onde X é um registrador de posição [a-z][A-Z][1-9].
-	'X		saltar para última posição marcada, onde X é o registrador que contém a posição.
-	''		voltar para linha que o cursor estava antes do salto, vai e volta.
-	'.		saltar para última linha que você modificou.
 
 	ctrl y		rolar texto uma linha para cima.
 	ctrl e		rolar texto uma linha para baixo.
@@ -186,6 +176,61 @@ Escrito por: Luiz Paulo de Lima Araújo
 	M		mover cursor para o meio da tela.
 	L		mover cursor para o fim da tela.
 
+
+
+    {REGISTRADORES}
+	"AB		gravar registrador de textos onde A é o nome do
+			registrador e B é a operação a ser feita
+			(p-paste y-yank d-delete c-change).
+            Pode ser registrador: [a-z][A-Z][1-9]
+
+
+
+    {MACROS}
+	qA		gravar macro. A= registrador [a-z][A-Z][1-9]
+	@A		executar MACRO gravada. A= registrador [a-z][A-Z][1-9]
+    @@      repetir
+
+
+
+    {POSIÇÕES DO CURSOR}
+	mX		marcar atual posição do cursor, onde X é um registrador de posição [a-z][A-Z][1-9].
+	'X		saltar para última posição marcada, onde X é o registrador que contém a posição.
+	''		voltar para linha que o cursor estava antes do salto, vai e volta.
+	'.		saltar para última linha que você modificou.
+
+
+
+    {DOBRAS}
+    zfND    dobrar (fold). N corresponde a número de linhas para; D corresponde a: j=cima k=baixo.
+            dobra N linhas de modo a ocuta-lhas.
+    zo      abre (open) linha dobrada.
+    zc      fecha (close) linha com dobra.
+
+
+
+    {COPIAR, COLAR E DELETAR}
+	yy		copiar linha inteira onde o cursor está (y yank).
+    Y       faz a mesma coisa que o acima.
+    yw      copiar palavra da posição do cursor até o fim dela.
+	p		colar conteúdo previamente copiado ou cortado (p paste).
+	dd		deletar a linha inteira onde o cursor está (d delete).
+    dw      deletar a palavra da posição do cursor até o fim dela (delete word).
+    D       deletar do cursor até fim da linha (faz o mesmo que d$).
+	x		deletar letra por letra a frente do cursor.
+	d$		deletar do cursor até o fim da linha.
+	d0		deletar do cursor até o comesso da linha.
+	
+
+
+    {BUSCA POR PADRÕES NO TEXTO}
+    /padrão		localizar um padrão de cima para baixo.
+	?padrão		localizar um padrão de baixo para cima.
+	n		mostrar o próximo padrão encontrado.
+
+
+
+    {JANELAS}
 	ctrl ww		mudar foco da tela dividida.
 	ctrl wv		divide o texto atual em duas janelas verticais.
 	ctrl ws		dividir texto atual em duas janelas horizontais.
@@ -197,6 +242,16 @@ Escrito por: Luiz Paulo de Lima Araújo
 	ctrl wr		rotacionar janelas.
 	ctrl wq		fechar janela em que o cursor se encontra.
 
+
+    {OUTROS}
+	o 		cria linha vazia abaixo, vai para ela, e entra em insert.
+	O 		cria linha vazia acima , vai para ela, e entra em insert.
+
+	r		replace. Troca letra em que o cursor está em cima.
+
+	J		fundir a linha de baixo no fim da linha atual(interessante).
+    K       abre manual man para a palavra abaixo do cursor.
+
 ```
 
 ### Linha De Comando :
@@ -204,43 +259,57 @@ Escrito por: Luiz Paulo de Lima Araújo
 ```
 	:help	COMANDO		obter ajuda acerca de um comando do vim.
 
-	:e /file		abrir um arquivo do diretório especificado.
-	:w			salvar no dirétorio onde você abriu o vim.
+    {ARQUIVO}
+	:e /file		    abrir um arquivo do caminho especificado.
+	:w			        salvar (recebe argumento de nome se o arquivo novo não tem nome).
 	:saveas /file		salvar no dirétorio especificado por você.
-	:q			sair
-	:q!			forçar saída sem salvar o arquivo ou os arquivos que você modificou.
+	:q                  sair (não sai se as modificações do arquivo não foram salvas).
+	:q!                 forçar saída sem salvar o arquivo ou os arquivos que você modificou.
 
-	:bn			mudar para o proximo buffer.
-	:bp			mudar para o buffer anterior.
-	:bd			fechar/deletar o buffer corrente.
-	:ls			listar todos os buffers abertos.
+    {BUFFERS}
+	:bn                 mudar para o proximo buffer.
+	:bp                 mudar para o buffer anterior.
+	:bd                 fechar/deletar o buffer corrente.
+	:ls                 listar todos os buffers abertos.
 
+    {TEXTOS EM TELA DIVIDIDA}
 	:split	/file		abrir outro arquivo para tela dividida na horizontal.
 	:vsplit	/file		abrir outro arquivo para tela dividida na vertical.
 
-	:colorschereme NOME	alterar o esquema de cores da coloração de sintaxe do vim.
-	:set background=	pode ser dark ou light.
-	:set mouse=a		para que o mouse possa interagir com o vim.
+    {BUSCA E SUBSTITUIÇÃO}
+    Linha em que o cursor se econtra.
+	 :s/argum/algum/g	    substituir padrão por outro sem perguntar.
+	 :s/consola/console/gc	substituir padrão por outro perguntando em cada ocorrência.
+    Todas linhas:
+	 :%s/argum/algum/g	    substituir padrão por outro sem perguntar.
+	 :%s/consola/console/gc	substituir padrão por outro perguntando em cada ocorrência.
+    De uma linha até outra
+     :3,10s/a/b/g           substituir sem perguntar da linha 3 até a 10
+     :3,10s/a/b/gc          substituir perguntando da linha 3 até a 10
 
-	:set number		ativar numeração de linhas.
-	:set nonumber		desativar numeração de linhas.
 
-	:set relativenumber	ativar numeração de linhas relativas ao cursor.
+    {OUTROS}
+	:colorschereme NOME	    alterar o esquema de cores do colorimento de sintaxe do vim.
+	:set background=	    pode ser dark ou light.
+	:set mouse=a		    para que o mouse possa interagir com o vim.
+
+    :set number             ativar numeração de linhas.
+	:set nonumber		    desativar numeração de linhas.
+
+	:set relativenumber     ativar numeração de linhas relativas ao cursor.
 	:set norelativenumber	desativar numeração de linhas relativas ao cursor.
 
-	:set autoindent		ativar autoidentação.
-	:set noautoindent	desativar autoidentação.
+	:set autoindent		    ativar autoidentação.
+	:set noautoindent	    desativar autoidentação.
 
-	:registers		mostrar o conteúdo dos registradores.
+	:registers		        mostrar o conteúdo dos registradores.
 
-	:set paste		ativar clipboard do sistema.
+	:set paste		    ativar clipboard do sistema.
 	:set nopaste		desativar clipboard do sistema.
 
-	:set nowrap		desativar quebra de linha.
-	:set wrap		ativar quebra de linha.
+	:set nowrap		    desativar quebra de linha.
+	:set wrap		    ativar quebra de linha.
 
-	:%s/argum/algum/g	substituir padrão por outro sem perguntar.
-	:%s/consola/console/gc	substituir padrão por outro perguntando em cada ocorrência.
 ```
 
 ## Replace R
@@ -249,6 +318,9 @@ Escrito por: Luiz Paulo de Lima Araújo
 	atalhos do modo insert funcionam aqui.
 ```
 
+## Plugins com gerenciador de Plugins VimPlug
+
+[vimplug](https://github.com/junegunn/vim-plug)
 
 ## Documentação Oficial Completa Em Inglês para o VIM padrão.
 
