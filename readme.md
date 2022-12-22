@@ -76,11 +76,11 @@ Escrito por: Luiz Paulo de Lima Araújo
 	page_down	rolar o texto para baixo.
 
 	ctrl shift v	colar texto do clipboard do sistema para o vim.
-    shift insert.   colar texto do clipboard do sistema.
+    	shift insert.   colar texto do clipboard do sistema.
 
 	ctrl t		insere tabulação no início da linha.
 	ctrl d		apaga tabulação no início da linha.
-    0 ctrl d	apaga todas as tabulações da linha.
+    	0 ctrl d	apaga todas as tabulações da linha.
 
 	ctrl e		recria o caractere abaixo do cursor para a linha atual.
 	ctrl y		recria o caractere acima  do cursor para a linha atual.
@@ -116,7 +116,7 @@ Escrito por: Luiz Paulo de Lima Araújo
     onde comandos atuam somente nesta.
     copias,colas,deleções,substituições
     com regex, indentações, armazenamento
-    em registadores e etcetera.
+    em registadores e etc...
 
 ```
 
@@ -130,19 +130,19 @@ Escrito por: Luiz Paulo de Lima Araújo
 	R		Modo replace.
 	v		Modo visual.
 	V		Modo visual para a linha inteira.
-	ctrl+v	Modo visual em bloco quadrado (extremamente útil).
+	ctrl+v		Modo visual em bloco quadrado.
 
 
     
     {REMOÇÃO DE CONTEÚDO ENTRE FECHANTES}
-    diX     remover conteúdo entre {} () "" '' `` ´´
-            X=caractere que fecha outro.
-
+    	diX     remover conteúdo entre {} () "" '' `` ´´
+            	X=caractere que fecha outro.
 
 
     {REFAZER E DESFAZER}
-	ctrl r	refazer
+	ctrl r		refazer
 	u		desfazer
+
 
     {MOVIMENTAÇÃO BÁSICA}
 	j		mover cursor para baixo.
@@ -159,7 +159,7 @@ Escrito por: Luiz Paulo de Lima Araújo
 
 	$		mover cursor para o fim da linha.
 	0		mover cursor para o comesso da linha.
-    ^       mover cursor para o comesso da linha.
+	^       	mover cursor para o comesso da linha.
 
 	}		mover cursor para o parágrafo abaixo.
 	{		mover cursor para o parágrafo acima.
@@ -182,14 +182,13 @@ Escrito por: Luiz Paulo de Lima Araújo
 	"AB		gravar registrador de textos onde A é o nome do
 			registrador e B é a operação a ser feita
 			(p-paste y-yank d-delete c-change).
-            Pode ser registrador: [a-z][A-Z][1-9]
-
-
-
+            		Pode ser registrador: [a-z][A-Z][1-9]
+	
     {MACROS}
 	qA		gravar macro. A= registrador [a-z][A-Z][1-9]
+	q		parar gravação de macro.
 	@A		executar MACRO gravada. A= registrador [a-z][A-Z][1-9]
-    @@      repetir
+    	@@      	repetir
 
 
 
@@ -202,7 +201,7 @@ Escrito por: Luiz Paulo de Lima Araújo
 
 
     {DOBRAS}
-    zfND    dobrar (fold). N corresponde a número de linhas para; D corresponde a: j=cima k=baixo.
+    zfND    dobrar (fold). N corresponde a número de linhas para; D corresponde a: j=cima ou k=baixo.
             dobra N linhas de modo a ocuta-lhas.
     zo      abre (open) linha dobrada.
     zc      fecha (close) linha com dobra.
@@ -211,12 +210,12 @@ Escrito por: Luiz Paulo de Lima Araújo
 
     {COPIAR, COLAR E DELETAR}
 	yy		copiar linha inteira onde o cursor está (y yank).
-    Y       faz a mesma coisa que o acima.
-    yw      copiar palavra da posição do cursor até o fim dela.
+    	Y       	faz a mesma coisa que o acima.
+    	yw      	copiar palavra da posição do cursor até o fim dela.
 	p		colar conteúdo previamente copiado ou cortado (p paste).
 	dd		deletar a linha inteira onde o cursor está (d delete).
-    dw      deletar a palavra da posição do cursor até o fim dela (delete word).
-    D       deletar do cursor até fim da linha (faz o mesmo que d$).
+    	dw      	deletar a palavra da posição do cursor até o fim dela (delete word).
+    	D       	deletar do cursor até fim da linha (faz o mesmo que d$).
 	x		deletar letra por letra a frente do cursor.
 	d$		deletar do cursor até o fim da linha.
 	d0		deletar do cursor até o comesso da linha.
@@ -224,7 +223,7 @@ Escrito por: Luiz Paulo de Lima Araújo
 
 
     {BUSCA POR PADRÕES NO TEXTO}
-    /padrão		localizar um padrão de cima para baixo.
+    	/padrão		localizar um padrão de cima para baixo.
 	?padrão		localizar um padrão de baixo para cima.
 	n		mostrar o próximo padrão encontrado.
 
@@ -250,7 +249,7 @@ Escrito por: Luiz Paulo de Lima Araújo
 	r		replace. Troca letra em que o cursor está em cima.
 
 	J		fundir a linha de baixo no fim da linha atual(interessante).
-    K       abre manual man para a palavra abaixo do cursor.
+    	K       	abre manual man para a palavra abaixo do cursor.
 
 ```
 
