@@ -67,11 +67,11 @@ Escrito por: Luiz Paulo de Lima Araújo
 ### Modo Inserção i
 
 ```
-    esc         sair do modo insert.
-    home	    move o cursor para o início da linha.
-	end		    move o cursor para o fim da linha.
+    	esc         	sair do modo insert.
+    	home	    	move o cursor para o início da linha.
+	end		move o cursor para o fim da linha.
 	insert		vai para o modo substituição.
-	del		    apaga letra sob o cursor.
+	del		apaga letra sob o cursor.
 	page_up		rolar o texto para cima.
 	page_down	rolar o texto para baixo.
 
