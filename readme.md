@@ -135,8 +135,9 @@ Escrito por: Luiz Paulo de Lima Araújo
 
     
     {REMOÇÃO DE CONTEÚDO ENTRE FECHANTES}
-    	diX     remover conteúdo entre {} () "" '' `` ´´
-            	X=caractere que fecha outro.
+      X = caractere que fecha outro.
+    	diX     deletar conteúdo entre {} () "" '' `` ´´
+        yiX     copiar (yank) 
 
 
     {REFAZER E DESFAZER}
