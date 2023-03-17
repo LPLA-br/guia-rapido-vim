@@ -60,9 +60,8 @@ AltGr + / = °
 <code>
     UTF-8
 
-    ctrl + shift + u
-    solte o u e segure o ctrl+shift enquanto
-    digitas o código hexadecimal utf-8 de dois
+    ctrl + shift + u    aparecerá um u com
+    underline digite o código hexadecimal utf-8 de dois
     bytes. Tu deves consultares alguma tabela
     com a descrição dos caracteres utf na web
     como nesse site abaixo:
@@ -71,10 +70,6 @@ AltGr + / = °
     
     Exemplo:
     U+0101 = ā
-
-    PS: Pode ocorrer conflito com atalhos de
-    terminais ou aplicações gráficas (o que
-    é irritante).
 
 </code>
 <p>
