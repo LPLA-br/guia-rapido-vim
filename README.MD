@@ -54,10 +54,10 @@ _ registrador buraco negro, caiu aqui já era.
 Use o commando :registers para visualizar os seus respectivos conteúdos.
 
 Buffers - Vários arquivos de textos abertos em simultâneo.
-Digamos que você abriu vários textos com o vim assim:
+Digamos que abriste vários textos com o vim da seguinte forma:
 $vim a.txt b.txt c.txt
 Verás apenas um buffer com apenas um texto na tela principal do editor.
-use os comandos :bn :bp para mover por entre esses buffers abertos.
+use os comandos :bn :bp para mover-se entre esses buffers abertos.
 :bdelete ou :bd para deletar o buffer (não o arquivo).
 :split ou :vsplit para dividir a tela respecivamente na: horizontal ou vertical.
 ```
